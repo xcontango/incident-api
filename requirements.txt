@@ -1,0 +1,7 @@
+django==3.1
+django_cors_headers==3.6
+djangorestframework==3.12
+psycopg2-binary==2.8.6
+pytest==5.4
+requests==2.25
+structlog==20.1
