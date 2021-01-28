@@ -2,6 +2,9 @@
 Sample Django-DRF+Docker wepapp, wired together with a docker-compose file.
 Meant to enable one to quickly spin up a local dev environment that requires the aforementioned software stack.
 
+It illustrates the use of Django Rest Framework serving a json API which in turn utilizes a REST service
+as a data source, and asynchronous sourcing of multiple urls via `aiohttp`.
+
 ## Setup
 
 #### Prerequisites

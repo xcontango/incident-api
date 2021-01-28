@@ -4,7 +4,8 @@ services:
   db:
     image: "postgres:12-alpine"
     volumes:
-      - ./pgdata:/pgdata:z
+      - ./pgdata:/pgdata
+      - /etc/passwd:/etc/passwd:ro
     ports:
       - "${HOST_DB_PORT:-5432}:5432"
     environment:
@@ -29,6 +30,8 @@ services:
       DB_PORT: "${DB_PORT}"
       DB_USER: "${DB_USER}"
       DB_PASS: "${DB_PASS}"
+      DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-*}"
+      DJANGO_DEBUG: "${DJANGO_DEBUG:-true}"
       ROOT_DATA_URL: "${ROOT_DATA_URL}"
       API_USER_NAME: "${API_USER_NAME}"
       API_USER_PASS: "${API_USER_PASS}"
