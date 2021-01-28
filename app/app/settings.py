@@ -116,6 +116,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        # 'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
+}
+
 ROOT_DATA_URL = os.environ['ROOT_DATA_URL']
 API_USER_NAME = os.environ['API_USER_NAME']
 API_USER_PASS = os.environ['API_USER_PASS']
